@@ -1,0 +1,428 @@
+@font-face {
+    font-family: copyright klim;
+    src: url("./assets/5f7b8f7d4bbab74ecfd880cc_soehne-web-halbfett.ttf");
+}
+
+@font-face {
+    font-family: copyright klim buch;
+    src: url("./assets/5f7b8f7d96142d55ee9f00b2_soehne-web-buch.ttf");
+}
+
+
+@font-face {
+    font-family: vanguard;
+    src: url("./assets/5f729a273e12c8c5fddc5a82_VanguardCF-DemiBold.ttf");
+}
+
+*cursor {
+    z-index: 99999999999999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "copyright klim";
+}
+
+#moving-circle {
+    position: absolute;
+    z-index: 9999999999;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -30%);
+    pointer-events: none;
+    background-color: white;
+    border: 2px solid black;
+    mix-blend-mode: difference;
+    background-blend-mode: difference;
+}
+
+#main {
+    overflow-x: hidden;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+
+#page1 {
+    position: relative;
+    width: 100vw;
+
+}
+
+#nav {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 3vw;
+}
+
+.logo-container {
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    font-family: "vanguard";
+    background-image: url("assets/download.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#nav I {
+    font-size: 2vw;
+}
+
+.container {
+    position: relative;
+    margin: 3vh 7vw;
+    height: 60vh;
+}
+
+.container>h2 {
+    font-size: 15vw;
+    font-family: "vanguard";
+    line-height: 27vh;
+    display: inline-block;
+}
+
+.container>h2::after {
+    content: "*";
+    position: absolute;
+    font-size: 3vw;
+    left: 63%;
+    top: 35%;
+}
+
+.left-txt {
+    position: absolute;
+    width: 20%;
+    left: 80%;
+    top: 90%;
+}
+
+.left-txt>h4 {
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #2b2a2a;
+    text-transform: uppercase;
+    font-family: "copyright klim buch";
+
+}
+
+
+
+#big-content {
+    position: relative;
+    width: 100vw;
+}
+
+.img-txt-container {
+    position: relative;
+    width: fit-content;
+    right: -43%;
+    cursor: pointer;
+
+}
+
+.img-txt-container:nth-child(even) {
+    right: -5%;
+
+}
+
+.round-txt {
+    position: absolute;
+    height: 9vw;
+    width: 9vw;
+    z-index: 8888;
+    mix-blend-mode: difference;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+}
+
+.ghumta-txt {
+    height: 9vw !important;
+    width: auto !important;
+    animation: ghumtaText 10s linear infinite both;
+    mix-blend-mode: difference;
+
+}
+
+.chota-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: difference;
+
+}
+
+.chota-circle img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2vw;
+    width: auto;
+
+}
+
+
+@keyframes ghumtaText {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.img-txt-container .img-box {
+    position: relative;
+    height: 60vh;
+    width: 50vw;
+    margin-top: 22vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#img-box1 {
+
+    background-image: url("assets/603bf45448b1e8fa7b57d2b3_Scotch\ Packaging\ Tape-p-500.jpeg");
+}
+
+#img-box2 {
+
+    background-image: url("./assets/60a09b8720a98151b6f60ba7_Vurve\ Mailer\ Box-p-500.jpeg");
+
+}
+
+#img-box3 {
+
+    background-image: url("assets/606a93bdaf0a4258232bdeb7_Knibble\ Dog-p-1080.jpeg");
+
+}
+
+#img-box4 {
+
+    background-image: url("assets/60986aadc9bd43f1b4692ae0_Luciforma\ TearSheets-p-500.jpeg");
+
+}
+
+#img-box5 {
+
+    background-image: url("assets/603b481a11f531319e997284_Rethink\ Stage-p-500.jpeg");
+
+}
+
+#img-box6 {
+
+    background-image: url("assets/60b6a27aed5533fd55443f30_Frusea-p-500.jpeg");
+
+}
+
+#img-box7 {
+
+    background-image: url("assets/5ff77745c55897bb869c7e00_Argos\ Payoff-p-500.jpeg");
+
+}
+
+#img-box8 {
+
+    background-image: url("assets/5ff79ee7eff831172294f87f_Kindly\ Spines2-p-1080.jpeg");
+
+}
+
+#img-box9 {
+
+    background-image: url("assets/60a0bc2734e04983a74a0707_A21\ Payoff1-p-1080.jpeg");
+
+}
+
+
+.txt-container {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    align-items: center;
+
+}
+
+.txt-container #upper {
+    padding: 2vh;
+    font-size: 2.5vw;
+
+
+}
+
+
+.txt-container #lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120%;
+    padding-left: 2vh;
+    margin-bottom: 2vh;
+    align-items: center;
+
+
+}
+
+.txt-container #lower button {
+    background-color: none;
+    background: none;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1vh 2vh;
+    align-items: center;
+
+}
+
+.txt-container #lower button span {
+    font-family: "copyright klim buch";
+    color: rgb(88, 87, 87);
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+
+}
+
+footer {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+footer .wrapper{
+    box-sizing: content-box;
+    height: 70px;
+    padding: 50px 30px;
+    display: flex;
+    border-radius: 8px;
+    left: 5%;
+    top: 10%;
+    position: relative;
+    font-size: 5vw;
+    font-family: 'vanguard';
+    text-transform: uppercase;
+}
+.items{
+    overflow: hidden;
+}
+footer .wrapper span{
+    display: block;
+    height: 100%;
+    padding-left: 10px;
+    color: black;
+    animation: spin_words 6s infinite;
+}
+@keyframes spin_words{
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+}
+
+#email-circle {
+    position: relative;
+    height: 13vw;
+    width: 13vw;
+    border-radius: 50%;
+    background-color: black;
+    top: 25%;
+    left: 5%;
+}
+
+#email-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "copyright klim buch";
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8vw;
+}
+
+
+#bottomnav {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#bottomnav #top {
+    padding: 1vw 5vw;
+    font-size: 1.5vw;
+}
+
+#bottomnav #bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#bottomnav #bottom #first {
+    padding: 0.5vw;
+    font-size: .8vw;
+    margin: 4vh 10vh;
+}
+
+#bottomnav #bottom #second {
+    padding: 0.5vw;
+    font-size: .8vw;
+    margin: 4vh 10vh;
+
+}
