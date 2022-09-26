@@ -506,15 +506,24 @@ footer .wrapper span {
     }
 
     footer .wrapper{
-        font-size: 15vw;
+        font-size: 13vw;
     }
 
+    footer .wrapper span{
+        position: relative;
+        width: 80vw;
+    }
 
     #email-circle{
         height: 30vw;
         width: 30vw;
         top: 12%;
         left: 8%;
+    }
+
+    #email-circle span{
+        font-size: 1.8vw;
+
     }
 
     footer{
