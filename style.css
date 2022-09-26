@@ -45,12 +45,13 @@ body {
     background-color: white;
     border: 2px solid black;
     mix-blend-mode: difference;
-    background-blend-mode: difference;
+    mix-blend-mode: difference;
 }
 
 #main {
     overflow-x: hidden;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 100vw;
 
 }
 
@@ -318,7 +319,7 @@ footer {
     position: relative;
 }
 
-footer .wrapper{
+footer .wrapper {
     box-sizing: content-box;
     height: 70px;
     padding: 50px 30px;
@@ -331,39 +332,49 @@ footer .wrapper{
     font-family: 'vanguard';
     text-transform: uppercase;
 }
-.items{
+
+.items {
     overflow: hidden;
 }
-footer .wrapper span{
+
+footer .wrapper span {
     display: block;
     height: 100%;
     padding-left: 10px;
     color: black;
     animation: spin_words 6s infinite;
 }
-@keyframes spin_words{
-    10%{
+
+@keyframes spin_words {
+    10% {
         transform: translateY(-112%);
     }
-    25%{
+
+    25% {
         transform: translateY(-100%);
     }
-    35%{
+
+    35% {
         transform: translateY(-212%);
     }
-    50%{
+
+    50% {
         transform: translateY(-200%);
     }
-    60%{
+
+    60% {
         transform: translateY(-312%);
     }
-    75%{
+
+    75% {
         transform: translateY(-300%);
     }
-    85%{
+
+    85% {
         transform: translateY(-412%);
     }
-    100%{
+
+    100% {
         transform: translateY(-400%);
     }
 }
@@ -425,4 +436,121 @@ footer .wrapper span{
     font-size: .8vw;
     margin: 4vh 10vh;
 
+}
+
+@media only screen and (max-width:500px) {
+
+
+
+    #nav {
+        padding: 4vh 6vh;
+    }
+
+    #nav I {
+        font-size: 7vw;
+    }
+
+    .container>h2 {
+        font-size: 32vw;
+        line-height: 15vh;
+    }
+
+    .container {
+        margin: 10vh 7vw;
+    }
+
+
+
+    .container>h2::after {
+
+        content: "*";
+        position: absolute;
+        font-size: 8vw;
+        left: 79%;
+        top: 44%;
+
+    }
+
+
+    .left-txt>h4{
+        position: absolute;
+        font-size: 1.8vw;
+        left: -115%;
+        top: 20%;
+    }
+
+    .img-txt-container .img-box{
+        margin-top: 15vh;
+        height: 22vh;
+        width: 62vw;
+        left: -20%;
+    }
+
+    .txt-container #upper{
+        font-size: 3.5vw;
+        position: relative;
+        left: -20%;
+    }
+
+    .txt-container #lower{
+        position: relative;
+        left: -25%;
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 110%;
+        gap: 1vh;
+    }
+
+    .txt-container #lower button{
+        padding: 0.4vh 1vh;
+
+    }
+
+    .txt-container #lower button span{
+        font-size: 2.5vw    ;
+    }
+
+
+    .img-txt-container:nth-child(even) {
+        right: -20%;
+    
+    }
+
+    footer .wrapper{
+        font-size: 15vw;
+    }
+
+
+    #email-circle{
+        height: 30vw;
+        width: 30vw;
+        top: 12%;
+        left: 8%;
+    }
+
+    footer{
+        height: 70vh;
+    }
+
+    #bottomnav{
+        bottom: -5%;
+    }
+
+    #bottomnav #top{
+        font-size: 4.5vw;
+    }
+
+    #bottomnav #bottom #first{
+        font-size: 3.5vw;
+        margin: 4vh -1vh;
+    }
+
+    #bottomnav #bottom #second{
+
+        font-size: 3.5vw;
+    }
+    #bottomnav #bottom{
+        position: relative;
+        left: 10%;
+    }
 }
