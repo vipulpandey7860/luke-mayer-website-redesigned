@@ -342,41 +342,30 @@ footer .wrapper span {
     height: 100%;
     padding-left: 10px;
     color: black;
-    animation: spin_words 6s infinite;
+    animation: spin_words 6s ease infinite both;
 }
 
 @keyframes spin_words {
-    10% {
-        transform: translateY(-112%);
-    }
-
-    25% {
+    0% {
         transform: translateY(-100%);
     }
 
-    35% {
-        transform: translateY(-212%);
-    }
-
-    50% {
+    25% {
         transform: translateY(-200%);
     }
 
-    60% {
-        transform: translateY(-312%);
-    }
-
-    75% {
+    48% {
         transform: translateY(-300%);
     }
 
-    85% {
-        transform: translateY(-412%);
+    70% {
+        transform: translateY(-400%);
     }
 
     100% {
-        transform: translateY(-400%);
+        transform: translateY(-500%);
     }
+
 }
 
 #email-circle {

@@ -53,8 +53,6 @@ function CircleMoving() {
 
         circle.style.left = `${dets.pageX}px`;
         circle.style.top = `${dets.pageY}px`;
-        circle.style.mixBlendMode = 'difference';
-        circle.style.display = 'initial';
 
     })
 
