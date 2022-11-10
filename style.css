@@ -85,7 +85,7 @@ body {
 
 }
 
-.menubar{
+.menubar {
     height: 8vh;
     width: 0vw;
     background-color: #111;
@@ -99,11 +99,11 @@ body {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-.menubar :nth-child(1){
+.menubar :nth-child(1) {
     margin-left: 3vw;
 }
 
-.menubar a{
+.menubar a {
     text-decoration: none;
     color: #fff;
     font-weight: 200;
@@ -111,7 +111,7 @@ body {
 
 }
 
-.menubar a:hover{
+.menubar a:hover {
     border-bottom: 1px solid #fff;
 }
 
@@ -129,11 +129,11 @@ body {
 
 }
 
-#menu:hover .lines{
+#menu:hover .lines {
     transform: rotate(180deg);
 }
 
-.lines{
+.lines {
     height: 0.3vh;
     width: 2vw;
     background-color: #111;
@@ -269,7 +269,7 @@ body {
     background-size: cover;
 }
 
-#img-box0 video{
+#img-box0 video {
     height: 60vh;
     width: 50vw;
     object-position: center;
@@ -436,7 +436,7 @@ footer .wrapper span {
 
 }
 
-.email-circle{
+.email-circle {
     position: relative;
     height: 20vw;
     width: 20vw;
@@ -463,7 +463,7 @@ footer .wrapper span {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: .8vw;
-} 
+}
 
 
 #bottomnav {
@@ -483,7 +483,7 @@ footer .wrapper span {
     margin-bottom: 3vh;
 }
 
-#top #copy{
+#top #copy {
     position: absolute;
     color: gray;
     text-transform: uppercase;
@@ -494,7 +494,7 @@ footer .wrapper span {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
 }
 
-#top #copied{
+#top #copied {
     position: absolute;
     color: gray;
     text-transform: uppercase;
@@ -505,14 +505,14 @@ footer .wrapper span {
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
 }
 
-#email{
+#email {
     margin-top: 4vh;
     display: inline-block;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
 
 }
 
-#email:hover{
+#email:hover {
     border-bottom: 1px solid #111;
     padding-bottom: 1vw;
 
@@ -542,15 +542,18 @@ footer .wrapper span {
 
 @media only screen and (max-width:500px) {
 
+    #moving-circle{
+        display: none;
+    }
 
+    #main {
+        position: absolute;
+    }
 
     #nav {
         padding: 4vh 6vh;
     }
 
-    #nav I {
-        font-size: 7vw;
-    }
 
     .container>h2 {
         font-size: 32vw;
@@ -561,7 +564,21 @@ footer .wrapper span {
         margin: 10vh 7vw;
     }
 
+    #menu{
+        display: initial;
+        height: 10vw;
+        width: 10vw;
+    }
 
+    .lines{
+        width: 5vw;
+    }
+
+    .menubar{
+        width: 0;
+        right: 10%;
+        border-radius: 10vw;
+    }
 
     .container>h2::after {
 
@@ -586,6 +603,11 @@ footer .wrapper span {
         height: 22vh;
         width: 62vw;
         left: -20%;
+    }
+
+    #img-box0 video{
+        height: 22vh;
+        width: 62vw;
     }
 
     .txt-container #upper {
@@ -631,7 +653,7 @@ footer .wrapper span {
         height: 30vw;
         width: 30vw;
         top: 12%;
-        left: 8%;
+        left: 45%;
     }
 
     #email-circle span {
@@ -649,6 +671,7 @@ footer .wrapper span {
 
     #bottomnav #top {
         font-size: 4.5vw;
+        margin-left: 3vh;
     }
 
     #bottomnav #bottom #first {
