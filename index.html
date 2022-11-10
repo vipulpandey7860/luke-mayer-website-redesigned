@@ -21,17 +21,22 @@
 
         <div id="page1">
             <div id="nav">
-                <div class=" reqElem logo-container">
-
+                <div class=" reqElem logo-container"></div>
+                <div  class=" reqElem menubar">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
                 </div>
-                <i class=" reqElem ri-menu-line"></i>
+                <div class="reqElem" id="menu">
+                    <div class="lines" id="line1"></div>
+                    <div class="lines" id="line2"></div>
+                </div>
             </div>
 
 
             <div class="container">
 
-                <h2 class="main-text">HI,I'M </h2> <br>
-                <h2 class="main-text"> LUKE MAYER</h2>
+                <h2 class=" reqElem main-text">HI,I'M </h2> <br>
+                <h2 class=" reqElem main-text"> LUKE MAYER</h2>
             </div>
 
             <div class="left-txt">
@@ -45,6 +50,31 @@
         </div>
 
         <div id="big-content">
+
+            <div data-color="#5B455D" class="img-txt-container">
+
+                <div class="round-txt">
+                    <img class="ghumta-txt" src="assets/609df9ebb132d84ef636bdf6_Cursor Wheel.svg" alt="">
+                    <div class="chota-circle">
+
+                        <img class="arrow" src="assets/609dfb98b3778bf55c4b85b0_arrowB.svg" alt="">
+                    </div>
+                </div>
+
+                <div id="img-box0" class="img-box">
+                    <video src="assets/summer break.mp4" autoplay loop muted></video>
+                </div>
+                <div class="txt-container">
+                    <div id="upper">
+                        <span>Summer Break Studios</span>
+                    </div>
+                    <div id="lower">
+                        <button> <span> Website Design </span> </button>
+                        <button> <span> Webflow Development </span> </button>
+                        <button> <span> Case study </span> </button>
+                    </div>
+                </div>
+            </div>
 
             <div data-color="#fecc41" class="img-txt-container">
 
@@ -277,13 +307,17 @@
 
                 </div>
             </div>
-
-            <div data-scroll data-scroll-sticky class="reqElem" id="email-circle">
-                <span>Email me </span>
+            <div class="email-circle">
+                <div data-scroll data-scroll-sticky class="reqElem" id="email-circle">
+                    <span>Email me </span>
+                </div>
             </div>
-
             <div id="bottomnav">
-                <div id="top"> <span>design@fromluke.com</span></div>
+                <div id="top">
+                    <h6 id="copy">copy Email</h6>
+                    <h6 id="copied">Email Copied</h6>
+                    <div class="reqElem " id="email"> <span>design@fromluke.com</span></div>
+                </div>
                 <div id="bottom">
                     <div class="reqElem" id="first"> <span>WORDS + IMAGES + CODE ©2022 LUKE MEYER</span></div>
                     <div class="reqElem" id="second"><span> LINKEDIN</span></div>

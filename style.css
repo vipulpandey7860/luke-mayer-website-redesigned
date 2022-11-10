@@ -46,16 +46,16 @@ body {
     left: 50%;
     transform: translate(-20%, -30%);
     pointer-events: none;
-    background-color: white;
-    border: 2px solid black;
-    mix-blend-mode: difference;
-    mix-blend-mode: difference;
+    background-color: transparent;
+    border: 2px solid #fff;
+    mix-blend-mode: difference !important;
 }
 
 #main {
     overflow-x: hidden;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
     width: 100vw;
+    background-color: #fff;
 
 }
 
@@ -71,6 +71,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5vh 3vw;
+    align-items: center;
 }
 
 .logo-container {
@@ -84,9 +85,62 @@ body {
 
 }
 
-#nav I {
-    font-size: 2vw;
+.menubar{
+    height: 8vh;
+    width: 0vw;
+    background-color: #111;
+    position: absolute;
+    top: 4.4%;
+    right: 2%;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
+
+.menubar :nth-child(1){
+    margin-left: 3vw;
+}
+
+.menubar a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 200;
+    font-family: "copyright klim buch";
+
+}
+
+.menubar a:hover{
+    border-bottom: 1px solid #fff;
+}
+
+#menu {
+    position: relative;
+    height: 3.5vw;
+    width: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+#menu:hover .lines{
+    transform: rotate(180deg);
+}
+
+.lines{
+    height: 0.3vh;
+    width: 2vw;
+    background-color: #111;
+    margin: 6px 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
 
 .container {
     position: relative;
@@ -210,9 +264,16 @@ body {
     position: relative;
     height: 60vh;
     width: 50vw;
-    margin-top: 22vh;
+    margin-top: 15vh;
     background-position: center;
     background-size: cover;
+}
+
+#img-box0 video{
+    height: 60vh;
+    width: 50vw;
+    object-position: center;
+    object-fit: cover;
 }
 
 #img-box1 {
@@ -274,12 +335,15 @@ body {
     flex-direction: column;
     display: inline-block;
     align-items: center;
+    color: #fff;
+    mix-blend-mode: difference;
 
 }
 
 .txt-container #upper {
     padding: 2vh;
     font-size: 2.5vw;
+    color: #fff;
 
 
 }
@@ -293,6 +357,7 @@ body {
     padding-left: 2vh;
     margin-bottom: 2vh;
     align-items: center;
+    color: #fff;
 
 
 }
@@ -300,16 +365,15 @@ body {
 .txt-container #lower button {
     background-color: none;
     background: none;
-    border: 1px solid black;
+    border: 1px solid #fff;
     border-radius: 20px;
     padding: 1vh 2vh;
     align-items: center;
-
 }
 
 .txt-container #lower button span {
     font-family: "copyright klim buch";
-    color: rgb(88, 87, 87);
+    color: rgb(209, 202, 202);
     word-spacing: 2px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -372,14 +436,20 @@ footer .wrapper span {
 
 }
 
-#email-circle {
+.email-circle{
     position: relative;
-    height: 13vw;
-    width: 13vw;
+    height: 20vw;
+    width: 20vw;
+    margin-top: 5vh;
+    padding: 3vw 4.5vw;
+}
+
+#email-circle {
+    position: absolute;
+    height: 11vw;
+    width: 11vw;
     border-radius: 50%;
     background-color: black;
-    top: 25%;
-    left: 5%;
 }
 
 #email-circle span {
@@ -393,12 +463,12 @@ footer .wrapper span {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: .8vw;
-}
+} 
 
 
 #bottomnav {
     position: absolute;
-    height: 20vh;
+    height: 25vh;
     width: 100%;
     bottom: 0;
     display: flex;
@@ -407,11 +477,50 @@ footer .wrapper span {
 }
 
 #bottomnav #top {
+    height: 2vh;
     padding: 1vw 5vw;
     font-size: 1.5vw;
+    margin-bottom: 3vh;
 }
 
+#top #copy{
+    position: absolute;
+    color: gray;
+    text-transform: uppercase;
+    margin-bottom: 1vh;
+    font-weight: 100;
+    display: block;
+    opacity: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+
+#top #copied{
+    position: absolute;
+    color: gray;
+    text-transform: uppercase;
+    margin-bottom: 1vh;
+    font-weight: 100;
+    display: block;
+    opacity: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+
+#email{
+    margin-top: 4vh;
+    display: inline-block;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+
+}
+
+#email:hover{
+    border-bottom: 1px solid #111;
+    padding-bottom: 1vw;
+
+}
+
+
 #bottomnav #bottom {
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -465,27 +574,27 @@ footer .wrapper span {
     }
 
 
-    .left-txt>h4{
+    .left-txt>h4 {
         position: absolute;
         font-size: 1.8vw;
         left: -115%;
         top: 20%;
     }
 
-    .img-txt-container .img-box{
+    .img-txt-container .img-box {
         margin-top: 15vh;
         height: 22vh;
         width: 62vw;
         left: -20%;
     }
 
-    .txt-container #upper{
+    .txt-container #upper {
         font-size: 3.5vw;
         position: relative;
         left: -20%;
     }
 
-    .txt-container #lower{
+    .txt-container #lower {
         position: relative;
         left: -25%;
         display: grid;
@@ -494,64 +603,65 @@ footer .wrapper span {
         gap: 1vh;
     }
 
-    .txt-container #lower button{
+    .txt-container #lower button {
         padding: 0.4vh 1vh;
 
     }
 
-    .txt-container #lower button span{
-        font-size: 2.5vw    ;
+    .txt-container #lower button span {
+        font-size: 2.5vw;
     }
 
 
     .img-txt-container:nth-child(even) {
         right: -20%;
-    
+
     }
 
-    footer .wrapper{
+    footer .wrapper {
         font-size: 13vw;
     }
 
-    footer .wrapper span{
+    footer .wrapper span {
         position: relative;
         width: 80vw;
     }
 
-    #email-circle{
+    #email-circle {
         height: 30vw;
         width: 30vw;
         top: 12%;
         left: 8%;
     }
 
-    #email-circle span{
+    #email-circle span {
         font-size: 1.8vw;
 
     }
 
-    footer{
+    footer {
         height: 70vh;
     }
 
-    #bottomnav{
+    #bottomnav {
         bottom: -5%;
     }
 
-    #bottomnav #top{
+    #bottomnav #top {
         font-size: 4.5vw;
     }
 
-    #bottomnav #bottom #first{
+    #bottomnav #bottom #first {
         font-size: 3vw;
         margin: 4vh -1vh;
     }
 
-    #bottomnav #bottom #second{
+    #bottomnav #bottom #second {
 
         font-size: 3vw;
     }
-    #bottomnav #bottom{
+
+    #bottomnav #bottom {
         position: relative;
         left: 10%;
     }

@@ -122,10 +122,8 @@ function circleBigSolidBG() {
 
         ReqElem[i].addEventListener('mousemove', function (info) {
 
-            circle.style.transform = 'scale(5)';
+            circle.style.transform = 'scale(4)';
             circle.style.backgroundColor = 'white';
-            circle.style.border = `2px solid black`;
-
 
         })
 
@@ -133,6 +131,10 @@ function circleBigSolidBG() {
 
 
             circle.style.transform = 'scale(1)';
+            circle.style.backgroundColor = 'transparent';
+            circle.style.border = ' 2px solid #fff';
+
+
 
         })
 
@@ -142,16 +144,18 @@ function circleBigSolidBG() {
 function EmailCircle() {
     var emailCircle = document.querySelector("#email-circle");
 
-    emailCircle.addEventListener('mousemove', function (mnt) {
 
-        emailCircle.style.transform = 'scale(1.2)'
+    emailCircle.addEventListener("mousemove", function (ek) {
+
+        emailCircle.style.transform = 'scale(1.5)';
+        emailCircle.style.transform = `translate(${ek.clientX * .2}px,${ek.clientY * .1}px)`;
+
 
     })
 
     emailCircle.addEventListener('mouseleave', function (mnt) {
 
-
-        emailCircle.style.transform = 'scale(1)'
+        emailCircle.style.transform = `translate(0px,0px)`;
 
     })
 
@@ -159,9 +163,72 @@ function EmailCircle() {
 }
 
 
+function OpenCloseButton() {
+
+    var menu = document.querySelector("#menu");
+    var full = document.querySelector(".menubar");
+    var line1 = document.querySelector("#line1");
+    var line2 = document.querySelector("#line2");
+
+    var clickCounter = 1;
+
+    menu.addEventListener("click", function () {
+        if (clickCounter === 1) {
+
+            full.style.width = '20vw';
+            line1.style.transform = `rotate(45deg) translate(-1px, 10px)`;
+            line2.style.transform = `rotate(-45deg) translate(-1px, -10px)`;
+
+            line1.style.marginLeft = '15px';
+            line2.style.marginLeft = '15px';
+
+
+            clickCounter = 0;
+        } else {
+            full.style.width = '0vw';
+
+            line1.style.transform = ``;
+            line2.style.transform = ``;
+
+            clickCounter = 1;
+        }
+
+    })
+
+}
+
+function emailCopy() {
+
+    let copytxt = document.querySelector('#copy');
+    let copiedtxt = document.querySelector('#copied');
+
+    let emailTxt = document.querySelector('#email')
+
+    emailTxt.addEventListener('mouseenter', function () {
+        copytxt.style.opacity = '1';
+
+    })
+
+    document.querySelector('#email').addEventListener('mouseleave', function () {
+        copytxt.style.opacity = '0';
+        copiedtxt.style.opacity = '0';
+
+
+    })
+
+
+    emailTxt.addEventListener('click',function(){
+        copytxt.style.opacity = '0';
+        copiedtxt.style.opacity = '1';
+
+    })
+
+}
 
 locoScroll();
 PageColorChange();
 CircleMoving();
 EmailCircle();
 circleBigSolidBG();
+OpenCloseButton();
+emailCopy();
