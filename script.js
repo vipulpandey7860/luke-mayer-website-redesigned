@@ -71,7 +71,9 @@ function PageColorChange() {
     for (let i = 0; i < container.length; i++) {
         container[i].addEventListener("mouseenter", function (dets) {
 
-            const color = dets.path[0].dataset.color;
+            // const color = dets.path[0].dataset.color;
+            const color = dets.srcElement.dataset.color;
+
             main.style.backgroundColor = color;
 
             circleTxt[i].style.display = 'initial';
