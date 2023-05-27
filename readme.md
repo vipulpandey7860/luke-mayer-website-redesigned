@@ -10,7 +10,6 @@ The recreated website can be found live at: [Luke Mayer](https://i-vipulpandey.g
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project status](#Project-Status)
-- [Installation](#Installation)
 - [Contributing](#contributing)
 - [Acknowledgements](#Acknowledgements)
 
@@ -20,7 +19,6 @@ The recreated website can be found live at: [Luke Mayer](https://i-vipulpandey.g
 
 - Fully responsive design
 - Animations and transitions created using GSAP
-- Interactive fruit selection feature on the home page
 - Easy-to-use navigation menu
 
 ## Technologies Used
@@ -37,12 +35,6 @@ Include links to any relevant documentation or resources for each technology.
 ## Project Status
 
 This project was created as a demonstration of HTML, CSS, and JavaScript skills, and is therefore not a live implementation of the website. It is intended solely as a portfolio piece and to showcase front-end development abilities.
-
-## Installation
-
-1. Clone the repository: `git clone https://github.com/i-vipulpandey/GetTala-website-redesigned.git`
-2. Navigate to the project directory: `cd luke-mayer-website-redesigned`
-3. Open the `index.html` file in your browser.
 
 
 ## Contributing
