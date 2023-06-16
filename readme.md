@@ -1,4 +1,4 @@
-# RoketAir - Frontend Recreation
+# Luke Mayer - Frontend Recreation
 
 This project is a redesign of the luke mayer portfolio website. The recreation was built using HTML, CSS, and JavaScript, with animations created using GSAP.
 
